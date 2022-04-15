@@ -1,0 +1,359 @@
+{
+	"name": "pl_load_tels_file_sqlserver",
+	"properties": {
+		"activities": [
+			{
+				"name": "cpy tels to table",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"maxConcurrentConnections": 1,
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false,
+						"tableOption": "autoCreate",
+						"disableMetricsCollection": true
+					},
+					"enableStaging": false,
+					"parallelCopies": 1,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Unit Turn Number",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Unit Turn Number",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Facility Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Facility Name",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BU",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "BU",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Area Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Area Name",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Unit Master ID",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Unit Master ID",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Square Footage",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Square Footage",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Care Type",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Care Type",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Notes1",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Notes1",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Area Status",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Area Status",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Assigned To",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Assigned To",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Template",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Template",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Created Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Created Date",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Start Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Start Date",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Due Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Due Date",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Completed Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Completed Date",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Days Open",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Days Open",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Checklist Item Number",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Checklist Item Number",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Checklist Item",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Checklist Item",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Condition",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Condition",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Checklist Item Status",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Checklist Item Status",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Notes",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Notes",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Cost",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Cost",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Hours",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Hours",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Unit Turn Status",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Unit Turn Status",
+									"type": "String",
+									"physicalType": "String"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "ds_tels_test_file",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "ds_tels_sqltable",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "Final"
+		},
+		"annotations": [],
+		"lastPublishTime": "2022-04-12T18:18:53Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

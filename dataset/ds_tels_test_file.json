@@ -1,0 +1,122 @@
+{
+	"name": "ds_tels_test_file",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_tgt",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "Tels_file.csv",
+				"folderPath": "test",
+				"fileSystem": "raw"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Unit Turn Number",
+				"type": "String"
+			},
+			{
+				"name": "Facility Name",
+				"type": "String"
+			},
+			{
+				"name": "BU",
+				"type": "String"
+			},
+			{
+				"name": "Area Name",
+				"type": "String"
+			},
+			{
+				"name": "Unit Master ID",
+				"type": "String"
+			},
+			{
+				"name": "Square Footage",
+				"type": "String"
+			},
+			{
+				"name": "Care Type",
+				"type": "String"
+			},
+			{
+				"name": "Notes7",
+				"type": "String"
+			},
+			{
+				"name": "Area Status",
+				"type": "String"
+			},
+			{
+				"name": "Assigned To",
+				"type": "String"
+			},
+			{
+				"name": "Template",
+				"type": "String"
+			},
+			{
+				"name": "Created Date",
+				"type": "String"
+			},
+			{
+				"name": "Start Date",
+				"type": "String"
+			},
+			{
+				"name": "Due Date",
+				"type": "String"
+			},
+			{
+				"name": "Completed Date",
+				"type": "String"
+			},
+			{
+				"name": "Days Open",
+				"type": "String"
+			},
+			{
+				"name": "Checklist Item Number",
+				"type": "String"
+			},
+			{
+				"name": "Checklist Item",
+				"type": "String"
+			},
+			{
+				"name": "Condition",
+				"type": "String"
+			},
+			{
+				"name": "Checklist Item Status",
+				"type": "String"
+			},
+			{
+				"name": "Notes20",
+				"type": "String"
+			},
+			{
+				"name": "Cost",
+				"type": "String"
+			},
+			{
+				"name": "Hours",
+				"type": "String"
+			},
+			{
+				"name": "Unit Turn Status",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

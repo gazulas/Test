@@ -1,0 +1,25 @@
+{
+	"name": "trigger_schedule",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_ingest_population_data",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2022-04-03T05:36:00",
+				"endTime": "2022-04-03T22:30:00",
+				"timeZone": "Mountain Standard Time"
+			}
+		}
+	}
+}

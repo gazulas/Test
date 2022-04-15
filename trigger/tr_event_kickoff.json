@@ -1,0 +1,24 @@
+{
+	"name": "tr_event_kickoff",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_all_at_one",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/raw/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/24a83f75-5421-4c86-bf8e-4aed66368ebb/resourceGroups/PG-RG1/providers/Microsoft.Storage/storageAccounts/tgt1pgrg1gen2",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
