@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "ADF-pg-RG1"
+		},
+		"ds_sql_hosp_admin_daily_connectionString": {
+			"value": ""
+		},
+		"ls_AzureDatabricks_accessToken": {
+			"value": ""
+		},
+		"ls_ablob_src_connectionString": {
+			"value": ""
+		},
+		"ls_adls_tgt_accountKey": {
+			"value": ""
+		},
+		"ls_sql_server_db_connectionString": {
+			"value": ""
+		},
+		"ls_adls_tgt_properties_typeProperties_url": {
+			"value": "https://tgt1pgrg1gen2.dfs.core.windows.net"
+		},
+		"ls_http_github_coviddata_properties_typeProperties_url": {
+			"value": "@{linkedService().sourceBaseURL}"
+		},
+		"tr_event_kickoff_properties_typeProperties_scope": {
+			"value": "/subscriptions/24a83f75-5421-4c86-bf8e-4aed66368ebb/resourceGroups/PG-RG1/providers/Microsoft.Storage/storageAccounts/tgt1pgrg1gen2"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
